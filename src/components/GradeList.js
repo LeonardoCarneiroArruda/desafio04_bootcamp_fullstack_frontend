@@ -54,7 +54,6 @@ const GradeList = () => {
     GradeDataService.findByName(searchName)
       .then((response) => {
         setGrade(response.data);
-        console.log(response.data);
       })
       .catch((e) => {
         console.log(e);

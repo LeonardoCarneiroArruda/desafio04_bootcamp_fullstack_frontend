@@ -5,7 +5,7 @@ const getAll = () => {
 };
 
 const get = (id) => {
-  return http.get(`/grade/${id}`);
+  return http.get(`/grade/buscar/${id}`);
 };
 
 const create = (data) => {
@@ -25,7 +25,10 @@ const removeAll = () => {
 };
 
 const findByName = (name) => {
-  return http.get(`/grade?name=${name}`);
+  if(name === '')
+    name = 'TODOS';
+  
+  return http.get(`/grade/pesquisa-nome/${name}`);
 };
 
 export default {
